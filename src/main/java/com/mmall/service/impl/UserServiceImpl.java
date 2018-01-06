@@ -25,6 +25,7 @@ public class UserServiceImpl implements IUserService{
         if (user == null){
             return ServerResponse.createByErrorMsg("密码错误");
         }
+        //将密码设置为空
         user.setPassword(StringUtils.EMPTY);
         return ServerResponse.createBySuccess("登陆成功",user);
     }
