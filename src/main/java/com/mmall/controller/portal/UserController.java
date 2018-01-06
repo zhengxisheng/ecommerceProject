@@ -37,4 +37,51 @@ public class UserController {
         }
         return response;
     }
+
+    /**
+     * 注销登陆
+     * @param session
+     * @return
+     */
+    @RequestMapping(value = "logout.do",method = RequestMethod.POST)
+    public ServerResponse<String> logout(HttpSession session){
+        session.removeAttribute(Const.CURRENT_USER);
+        return  ServerResponse.createBySuccess();
+    }
+
+    /**
+     * 用户注册
+     * @param user
+     * @return
+     */
+    @RequestMapping(value = "register.do",method = RequestMethod.POST)
+    public ServerResponse<String> register(User user){
+        return iUserService.register(user);
+    }
+
+    /**
+     * 校验用户名和邮箱
+     * @param str 校验值
+     * @param type 校验字段
+     * @return
+     */
+    @RequestMapping(value = "checkValid.do",method = RequestMethod.POST)
+    public ServerResponse<String> checkValid(String str,String type){
+        return  iUserService.checkValid(str,type);
+    }
+
+    /**
+     * 获取用户登陆信息
+     * @param session
+     * @return
+     */
+    @RequestMapping(value = "getUserInfo.do",method = RequestMethod.POST)
+    public ServerResponse <User> getUserInfo(HttpSession session){
+        User user = (User) session.getAttribute(Const.CURRENT_USER);
+        if(user!=null){
+            return ServerResponse.createBySuccess(user);
+        }
+        return ServerResponse.createByErrorMsg("用户未登陆，无法获取用户信息");
+    }
+
 }
