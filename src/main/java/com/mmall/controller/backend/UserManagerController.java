@@ -13,19 +13,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpSession;
 
 /**
- * Created by fanlinglong on 2018/1/10.
+ * Created by fanlinglong on 2018/1/6.
+ * 坑爹 /manager/user/ 请求不到404,貌似不能用manager关键字
  */
 @Controller
-@RequestMapping("/manager/user/")
+@RequestMapping("/manage/user/")
 public class UserManagerController {
 
     @Autowired
     private IUserService iUserService;
-
     /**
-     * 管理员登陆方法
-     * @param username 用户名
-     * @param password 密码
+     * 用户登陆
+     * @param username
+     * @param password
      * @param session
      * @return
      */
@@ -45,4 +45,5 @@ public class UserManagerController {
         }
         return response;
     }
+
 }
