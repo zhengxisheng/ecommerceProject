@@ -133,7 +133,7 @@
         create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="updateTime != null" >
-        now(),
+        update_time = now()
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -153,7 +153,7 @@
   </update>
   <!--判断用户名是否存在 -->
   <select id="checkUsername" parameterType="string" resultType="int">
-      SELECT COUNT (1) from mmall_user WHERE username = #{username}
+      SELECT COUNT(1) from mmall_user WHERE username = #{username}
   </select>
   <!--判断邮箱是否存在 -->
   <select id="checkEmail" parameterType="string" resultType="int">
@@ -184,12 +184,12 @@
   </update>
   <!--判断旧密码是否正确-->
   <select id="checkPasswordOld" parameterType="map" resultType="int">
-      SELECT COUNT (1) FROM mmall_user
+      SELECT COUNT(1) FROM mmall_user
       WHERE password = #{passworOld}
       and id =#{userId}
   </select>
   <select id="checkEmailByUserId" parameterType="map" resultType="int">
-      SELECT COUNT (1) FROM mmall_user
+      SELECT COUNT(1) FROM mmall_user
       WHERE email = #{email}
       and id !=#{userId}
   </select>
