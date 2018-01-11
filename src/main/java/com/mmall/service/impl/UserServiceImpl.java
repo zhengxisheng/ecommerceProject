@@ -160,4 +160,18 @@ public class UserServiceImpl implements IUserService{
         }
         return ServerResponse.createByErrorMsg("更新个人信息失败");
     }
+
+    /**
+     * 校验用户是不是管理员
+     * @param user
+     * @return
+     */
+    @Override
+    public ServerResponse checkAdminRole(User user){
+        if(user!=null&&user.getRole().intValue() ==Const.Role.ROLE_ADMIN){
+            return  ServerResponse.createBySuccess();
+        }
+        return ServerResponse.createByError();
+    }
+
 }
