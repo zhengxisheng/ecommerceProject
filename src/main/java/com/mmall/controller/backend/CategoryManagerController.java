@@ -90,4 +90,25 @@ public class CategoryManagerController {
         }
     }
 
+    /**
+     * 根据品类Id获取子类(递归tree)
+     * @param session
+     * @param categoryId
+     * @return
+     */
+    @RequestMapping(value = "getAllChildrenCategory.do",method = RequestMethod.GET)
+    @ResponseBody
+    public ServerResponse getAllChildrenCategory(HttpSession session,@RequestParam(value = "categoryId",defaultValue = "0") Integer categoryId){
+        User user = (User) session.getAttribute(Const.CURRENT_USER);
+        if(user==null){
+            return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(),"用户未登陆,请先登陆");
+        }
+        if(iUserService.checkAdminRole(user).isSuccess()){
+            return iCategoryService.selectCategoryAndChildrenById(categoryId);
+        }else{
+            return ServerResponse.createByErrorMsg("权限不足,需要管理员权限");
+        }
+
+    }
+
 }
