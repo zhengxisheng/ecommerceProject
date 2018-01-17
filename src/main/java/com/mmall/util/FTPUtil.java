@@ -52,7 +52,7 @@ public class FTPUtil {
                 ftpClient.enterLocalPassiveMode();
                 for (File fileItem:fileList){
                     fileInputStream = new FileInputStream(fileItem);
-                    ftpClient.storeFile(remotePath,fileInputStream);
+                    ftpClient.storeFile(fileItem.getName(),fileInputStream);
                 }
                 uploadResult = true;
             } catch (IOException e) {

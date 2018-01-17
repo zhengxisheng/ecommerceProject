@@ -155,7 +155,7 @@ public class ProductManagerController {
      * @param request
      * @return
      */
-    @RequestMapping(value = "upload")
+    @RequestMapping(value = "upload.do")
     @ResponseBody
     public ServerResponse upload (HttpSession session,
                                   @RequestParam(value = "upload_file",required = false) MultipartFile file,
@@ -192,7 +192,7 @@ public class ProductManagerController {
         "msg": "error message",
         "file_path": "[real file path]"
      */
-    @RequestMapping(value = "richtextImgUpload")
+    @RequestMapping(value = "richtextImgUpload.do")
     @ResponseBody
     public Map richtextImgUpload(HttpSession session,
                                  @RequestParam(value = "upload_file",required = false) MultipartFile file,
