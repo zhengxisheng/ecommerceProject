@@ -13,5 +13,21 @@ public interface IOrderService {
 
     ServerResponse aliCallback(Map<String,String> params);
 
-    ServerResponse createOrder(Integer id, Integer shippingId);
+    ServerResponse createOrder(Integer userId, Integer shippingId);
+
+    ServerResponse cancel(Integer userId, Long orderNo);
+
+    ServerResponse getOrderDetail(Integer userId, Long orderNo);
+
+    ServerResponse getOrderList(Integer userId, int pageNum, int pageSize);
+
+    ServerResponse managerList(int pageNum, int pageSize);
+
+    ServerResponse managerDetail(Long orderNo);
+
+    ServerResponse managerSearch(Long orderNo, int pageNum, int pageSize);
+
+    ServerResponse managerSendGoods(Long orderNo);
+
+    ServerResponse queryOrderPayStatus(Integer userId, Long orderNo);
 }
