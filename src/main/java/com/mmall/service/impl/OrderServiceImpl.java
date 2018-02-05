@@ -24,6 +24,7 @@ import com.mmall.util.DateTimeUtil;
 import com.mmall.util.FTPUtil;
 import com.mmall.util.PropertiesUtil;
 import com.mmall.vo.OrderItemVo;
+import com.mmall.vo.OrderProductVo;
 import com.mmall.vo.OrderVo;
 import com.mmall.vo.ShippingVo;
 import org.apache.commons.collections.CollectionUtils;
@@ -473,6 +474,27 @@ public class OrderServiceImpl implements IOrderService {
             return ServerResponse.createBySuccess();
         }
         return ServerResponse.createByError();
+    }
+
+    @Override
+    public ServerResponse getOrderCartProduct(Integer userId) {
+        OrderProductVo orderProductVo = new OrderProductVo();
+        List<Cart> cartList = cartMapper.selectCheckedCartByUserId(userId);
+        ServerResponse  serverResponse = this.getCartOrderItem(userId,cartList);
+        if (!serverResponse.isSuccess()){
+            return serverResponse;
+        }
+        List<OrderItem> orderItemList = (List<OrderItem>) serverResponse.getData();
+        List<OrderItemVo> orderItemVoList = Lists.newArrayList();
+        BigDecimal payment = new BigDecimal("0");
+        for (OrderItem orderItem : orderItemList){
+            payment = BigDecimalUtil.add(payment.doubleValue(),orderItem.getTotalPrice().doubleValue());
+            orderItemVoList.add(this.assembleOrderItemVo(orderItem));
+        }
+        orderProductVo.setOrderItemVoList(orderItemVoList);
+        orderProductVo.setProductTotalPrice(payment);
+        orderProductVo.setImageHost(PropertiesUtil.getProperty("ftp.server.http.prefix"));
+        return ServerResponse.createBySuccess(orderProductVo);
     }
 
     //管理员操作方法

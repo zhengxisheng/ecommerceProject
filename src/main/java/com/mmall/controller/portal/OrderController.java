@@ -175,4 +175,19 @@ public class OrderController {
         return ServerResponse.createBySuccess(false);
     }
 
+    /**
+     *  获取购物车订单预览
+     * @param session
+     * @return
+     */
+    @RequestMapping(value = "getOrderCartProduct.do")
+    @ResponseBody
+    public ServerResponse getOrderCartProduct(HttpSession session){
+        User user = (User) session.getAttribute(Const.CURRENT_USER);
+        if (user == null){
+            return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(),ResponseCode.NEED_LOGIN.getDesc());
+        }
+        return iOrderService.getOrderCartProduct(user.getId());
+    }
+
 }

@@ -30,4 +30,6 @@ public interface IOrderService {
     ServerResponse managerSendGoods(Long orderNo);
 
     ServerResponse queryOrderPayStatus(Integer userId, Long orderNo);
+
+    ServerResponse getOrderCartProduct(Integer userId);
 }
