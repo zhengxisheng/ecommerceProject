@@ -206,7 +206,7 @@ public class OrderServiceImpl implements IOrderService {
     public ServerResponse createOrder(Integer userId,Integer shippingId){
         //从购物车中获取已经勾选的商品
         List<Cart> cartList = cartMapper.selectCheckedCartByUserId(userId);
-        //计算订单总价
+        //订单明细
         ServerResponse serverResponse = this.getCartOrderItem(userId,cartList);
         if (!serverResponse.isSuccess()){
             return serverResponse;
@@ -297,6 +297,7 @@ public class OrderServiceImpl implements IOrderService {
     private ShippingVo assembleShippingVo(Shipping shipping) {
         ShippingVo shippingVo = new ShippingVo();
         shippingVo.setReceiverName(shipping.getReceiverName());
+        shippingVo.setReceiverPhone(shipping.getReceiverPhone());
         shippingVo.setReceiverAddress(shipping.getReceiverAddress());
         shippingVo.setReceiverProvince(shipping.getReceiverProvince());
         shippingVo.setReceiverCity(shipping.getReceiverCity());
@@ -415,6 +416,7 @@ public class OrderServiceImpl implements IOrderService {
         if (order == null){
             return ServerResponse.createByErrorMsg("此订单不存在");
         }
+        //一期已付款订单暂时不支持取消订单
         if (order.getStatus() != Const.OrderStatusEnum.NO_PAY.getCode()){
             return ServerResponse.createByErrorMsg("该订单已付款,不能取消订单");
         }

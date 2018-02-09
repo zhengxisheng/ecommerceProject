@@ -28,6 +28,7 @@ public class CategoryServiceImpl implements ICategoryService{
         if(StringUtils.isBlank(categoryName)){
             return ServerResponse.createByErrorMsg("参数错误,品类名称为空");
         }
+        //这里应该还要判断父ID不为零的时候，父ID存不存在。
         Category category = new Category();
         category.setName(categoryName);
         category.setParentId(parentId);
