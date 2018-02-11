@@ -2,31 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c933cd4f-bb63-4fd7-bbda-539ea544a900" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/ecommerceDemo/upload/qr-1518066070193.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mmall/common/Const$OrderStatusEnum.class" afterPath="$PROJECT_DIR$/target/classes/com/mmall/common/Const$OrderStatusEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mmall/common/Const$PayPlatformEnum.class" afterPath="$PROJECT_DIR$/target/classes/com/mmall/common/Const$PayPlatformEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mmall/common/Const$PaymentTypeEnum.class" afterPath="$PROJECT_DIR$/target/classes/com/mmall/common/Const$PaymentTypeEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mmall/service/impl/OrderServiceImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/com/mmall/service/impl/OrderServiceImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mmall/service/impl/OrderServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/mmall/service/impl/OrderServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ecommerceDemo.war" afterPath="$PROJECT_DIR$/target/ecommerceDemo.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ecommerceDemo/WEB-INF/classes/com/mmall/common/Const$OrderStatusEnum.class" afterPath="$PROJECT_DIR$/target/ecommerceDemo/WEB-INF/classes/com/mmall/common/Const$OrderStatusEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ecommerceDemo/WEB-INF/classes/com/mmall/common/Const$PayPlatformEnum.class" afterPath="$PROJECT_DIR$/target/ecommerceDemo/WEB-INF/classes/com/mmall/common/Const$PayPlatformEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ecommerceDemo/WEB-INF/classes/com/mmall/common/Const$PaymentTypeEnum.class" afterPath="$PROJECT_DIR$/target/ecommerceDemo/WEB-INF/classes/com/mmall/common/Const$PaymentTypeEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ecommerceDemo/WEB-INF/classes/com/mmall/controller/portal/OrderController.class" afterPath="$PROJECT_DIR$/target/ecommerceDemo/WEB-INF/classes/com/mmall/controller/portal/OrderController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ecommerceDemo/WEB-INF/classes/com/mmall/service/impl/OrderServiceImpl$1.class" afterPath="$PROJECT_DIR$/target/ecommerceDemo/WEB-INF/classes/com/mmall/service/impl/OrderServiceImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ecommerceDemo/WEB-INF/classes/com/mmall/service/impl/OrderServiceImpl.class" afterPath="$PROJECT_DIR$/target/ecommerceDemo/WEB-INF/classes/com/mmall/service/impl/OrderServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mmall/common/Const.java" afterPath="$PROJECT_DIR$/src/main/java/com/mmall/common/Const.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mmall/controller/portal/OrderController.java" afterPath="$PROJECT_DIR$/src/main/java/com/mmall/controller/portal/OrderController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mmall/service/impl/OrderServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/mmall/service/impl/OrderServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mmall.properties" afterPath="$PROJECT_DIR$/src/main/resources/mmall.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/logback.xml" afterPath="$PROJECT_DIR$/target/classes/logback.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mmall.properties" afterPath="$PROJECT_DIR$/target/classes/mmall.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ecommerceDemo/WEB-INF/classes/logback.xml" afterPath="$PROJECT_DIR$/target/ecommerceDemo/WEB-INF/classes/logback.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ecommerceDemo/WEB-INF/classes/mappers/PayInfoMapper.xml" afterPath="$PROJECT_DIR$/target/ecommerceDemo/WEB-INF/classes/mappers/PayInfoMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ecommerceDemo/WEB-INF/classes/mmall.properties" afterPath="$PROJECT_DIR$/target/ecommerceDemo/WEB-INF/classes/mmall.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mmall/controller/portal/test.java" afterPath="$PROJECT_DIR$/src/main/java/com/mmall/controller/portal/test.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,32 +31,12 @@
     <favorites_list name="ecommerceDemo" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="OrderController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mmall/controller/portal/OrderController.java">
+    <leaf>
+      <file leaf-file-name="test.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mmall/controller/portal/test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="75" column="13" lean-forward="true" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mmall/service/impl/OrderServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mmall.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mmall.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -98,17 +55,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Autowired</find>
-      <find>用户登陆</find>
-      <find>产品Id</find>
-      <find>info</find>
-      <find>ftp</find>
-      <find>goo</find>
-      <find>order</find>
-      <find>updateByPrimaryKey</find>
-      <find>Base_Column_List</find>
-      <find>selectByNameAndProductId</find>
-      <find>*</find>
       <find>updateCart</find>
       <find>searchProduct</find>
       <find>isSuccess</find>
@@ -127,6 +73,18 @@
       <find>setProductStatus</find>
       <find>default</find>
       <find>precreate</find>
+      <find>f</find>
+      <find>for</find>
+      <find>foreach</find>
+      <find>foreac</find>
+      <find>g</find>
+      <find>genn</find>
+      <find>gen</find>
+      <find>generna</find>
+      <find>genern</find>
+      <find>gener</find>
+      <find>generat</find>
+      <find>generate</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,7 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/mmall/service/IFileService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mmall/service/impl/FileServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/mmall/service/IProductService.java" />
@@ -192,6 +149,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mmall/service/impl/OrderServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mmall.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/mmall/controller/portal/OrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mmall/controller/portal/test.java" />
       </list>
     </option>
   </component>
@@ -345,9 +303,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -518,6 +473,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1200,12 +1158,13 @@
       <workItem from="1517967602168" duration="12460000" />
       <workItem from="1518054494583" duration="13141000" />
       <workItem from="1518141868684" duration="14058000" />
-      <workItem from="1518244375373" duration="3018000" />
+      <workItem from="1518244375373" duration="5597000" />
+      <workItem from="1518314189748" duration="1112000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210579000" />
+    <option name="totallyTimeSpent" value="214270000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1218,6 +1177,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1233,7 +1193,6 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23948598" sideWeight="0.5151351" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827103" sideWeight="0.49783784" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33995327" sideWeight="0.48486486" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38425925" sideWeight="0.5021552" order="12" side_tool="true" content_ui="tabs" />
@@ -1241,8 +1200,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827103" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4521028" sideWeight="0.49137932" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29556075" sideWeight="0.48216215" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13668224" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27837837" sideWeight="0.48407644" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13668224" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21027027" sideWeight="0.48407644" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19976635" sideWeight="0.48918918" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20432432" sideWeight="0.50558215" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1251,6 +1210,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33995327" sideWeight="0.48486486" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1323,14 +1283,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mmall/dao/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -1447,7 +1399,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="50" column="58" lean-forward="false" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1455,13 +1406,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mmall/controller/portal/ShippingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-685">
-          <caret line="58" column="35" lean-forward="false" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -1483,7 +1427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1491,7 +1434,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1513,14 +1455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2013">
           <caret line="17" column="2" lean-forward="false" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-          <folding>
-            <marker date="1515684929342" expanded="true" signature="1080:1190" ph="select from mmall_category" />
-            <marker date="1515684929342" expanded="true" signature="1277:1341" ph="delete from " />
-            <marker date="1515684929342" expanded="true" signature="1422:1704" ph="insert into mmall_category... " />
-            <marker date="1515684929342" expanded="true" signature="3047:3684" ph="update mmall... " />
-            <marker date="1515684929342" expanded="true" signature="3777:4094" ph="update mmall... " />
-            <marker date="1515684929342" expanded="true" signature="4209:4313" ph="SELECT FROM mmall_category" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1528,15 +1462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3853">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1517816237162" expanded="true" signature="1504:1616" ph="select from mmall_order_item" />
-            <marker date="1517816237162" expanded="true" signature="1703:1769" ph="delete from " />
-            <marker date="1517816237162" expanded="true" signature="1851:2359" ph="insert into mmall_order_item... " />
-            <marker date="1517816237162" expanded="true" signature="4402:5498" ph="update mmall... " />
-            <marker date="1517816237162" expanded="true" signature="5592:6148" ph="update mmall... " />
-            <marker date="1517816237162" expanded="true" signature="6247:6367" ph="SELECT FROM mmall_order_item" />
-            <marker date="1517816237162" expanded="true" signature="7009:7105" ph="SELECT FROM mmall_order_item" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1544,14 +1469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-725">
           <caret line="158" column="19" lean-forward="false" selection-start-line="158" selection-start-column="19" selection-end-line="158" selection-end-column="19" />
-          <folding>
-            <marker date="1518146184693" expanded="true" signature="1533:1642" ph="select from mmall_product" />
-            <marker date="1518146184693" expanded="true" signature="1729:1792" ph="delete from " />
-            <marker date="1518146184693" expanded="true" signature="1872:2377" ph="insert into mmall_product... " />
-            <marker date="1518146184693" expanded="true" signature="4462:5573" ph="update mmall... " />
-            <marker date="1518146184693" expanded="true" signature="5665:6211" ph="update mmall... " />
-            <marker date="1518146184693" expanded="true" signature="6285:6371" ph="SELECT FROM mmall_product" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1559,17 +1476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4474">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1516545514360" expanded="true" signature="1642:1752" ph="select from mmall_shipping" />
-            <marker date="1516545514360" expanded="true" signature="1839:1903" ph="delete from " />
-            <marker date="1516545514360" expanded="true" signature="2071:2689" ph="insert into mmall_shipping... " />
-            <marker date="1516545514360" expanded="true" signature="4995:6272" ph="update mmall... " />
-            <marker date="1516545514360" expanded="true" signature="6365:7024" ph="update mmall... " />
-            <marker date="1516545514360" expanded="true" signature="7103:7186" ph="DELETE FROM " />
-            <marker date="1516545514360" expanded="true" signature="7277:7889" ph="update mmall... " />
-            <marker date="1516545514360" expanded="true" signature="7976:8100" ph="SELECT FROM mmall_shipping" />
-            <marker date="1516545514360" expanded="true" signature="8185:8281" ph="SELECT FROM mmall_shipping" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1577,21 +1483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="12" column="56" lean-forward="true" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
-          <folding>
-            <marker date="1515596283091" expanded="true" signature="1323:1429" ph="select from mmall_user" />
-            <marker date="1515596283091" expanded="true" signature="1516:1576" ph="delete from " />
-            <marker date="1515596283091" expanded="true" signature="1653:2053" ph="insert into mmall_user... " />
-            <marker date="1515596283091" expanded="true" signature="3814:4718" ph="update mmall... " />
-            <marker date="1515596283091" expanded="true" signature="4807:5249" ph="update mmall... " />
-            <marker date="1515596283091" expanded="true" signature="5358:5418" ph="SELECT COUNT... mmall_user" />
-            <marker date="1515596283091" expanded="true" signature="5521:5576" ph="SELECT count... mmall_user" />
-            <marker date="1515596283091" expanded="true" signature="5687:5815" ph="SELECT FROM mmall_user" />
-            <marker date="1515596283091" expanded="true" signature="5944:6003" ph="SELECT quest... mmall_user" />
-            <marker date="1515596283091" expanded="true" signature="6107:6238" ph="SELECT COUNT... mmall_user" />
-            <marker date="1515596283091" expanded="true" signature="6335:6442" ph="UPDATE mmall... " />
-            <marker date="1515596283091" expanded="true" signature="6550:6642" ph="SELECT COUNT... mmall_user" />
-            <marker date="1515596283091" expanded="true" signature="6733:6818" ph="SELECT COUNT... mmall_user" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1599,13 +1490,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="114" column="14" lean-forward="false" selection-start-line="114" selection-start-column="14" selection-end-line="114" selection-end-column="14" />
-          <folding>
-            <marker date="1518147130567" expanded="true" signature="1212:1322" ph="select from mmall_pay_info" />
-            <marker date="1518147130567" expanded="true" signature="1409:1473" ph="delete from " />
-            <marker date="1518147130567" expanded="true" signature="1553:1916" ph="insert into mmall_pay_info... " />
-            <marker date="1518147130567" expanded="true" signature="3482:4273" ph="update mmall... " />
-            <marker date="1518147130567" expanded="true" signature="4365:4769" ph="update mmall... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1621,7 +1505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="36" column="54" lean-forward="false" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1629,18 +1512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="13" column="14" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="13" selection-end-column="14" />
-          <folding>
-            <marker date="1517748269293" expanded="true" signature="1083:1189" ph="select from mmall_cart" />
-            <marker date="1517748269293" expanded="true" signature="1276:1336" ph="delete from " />
-            <marker date="1517748269293" expanded="true" signature="1413:1701" ph="insert into mmall_cart... " />
-            <marker date="1517748269293" expanded="true" signature="3048:3694" ph="update mmall... " />
-            <marker date="1517748269293" expanded="true" signature="3783:4106" ph="update mmall... " />
-            <marker date="1517748269293" expanded="true" signature="4205:4296" ph="SELECT FROM mmall_cart" />
-            <marker date="1517748269293" expanded="true" signature="4395:4468" ph="SELECT COUNT... mmall_cart" />
-            <marker date="1517748269293" expanded="true" signature="4573:4689" ph="SELECT FROM mmall_cart" />
-            <marker date="1517748269293" expanded="true" signature="5388:5470" ph="SELECT IFNUL... " />
-            <marker date="1517748269293" expanded="true" signature="5578:5686" ph="SELECT FROM mmall_cart" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1670,14 +1541,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-230">
           <caret line="40" column="19" lean-forward="true" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
-          <folding>
-            <element signature="e#879#880#0" expanded="true" />
-            <element signature="e#908#909#0" expanded="true" />
-            <element signature="e#938#939#0" expanded="true" />
-            <element signature="e#964#965#0" expanded="true" />
-            <element signature="e#990#991#0" expanded="true" />
-            <element signature="e#1017#1018#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1699,7 +1562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="53" column="15" lean-forward="false" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1707,17 +1569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-523">
           <caret line="138" column="2" lean-forward="false" selection-start-line="138" selection-start-column="2" selection-end-line="138" selection-end-column="2" />
-          <folding>
-            <marker date="1517819302807" expanded="true" signature="1733:1840" ph="select from mmall_order" />
-            <marker date="1517819302807" expanded="true" signature="1927:1988" ph="delete from " />
-            <marker date="1517819302807" expanded="true" signature="2066:2683" ph="insert into mmall_order... " />
-            <marker date="1517819302807" expanded="true" signature="5121:6469" ph="update mmall... " />
-            <marker date="1517819302807" expanded="true" signature="6559:7231" ph="update mmall... " />
-            <marker date="1517819302807" expanded="true" signature="7335:7450" ph="SELECT FROM mmall_order" />
-            <marker date="1517819302807" expanded="true" signature="7546:7637" ph="SELECT FROM mmall_order" />
-            <marker date="1517819302807" expanded="true" signature="7731:7819" ph="SELECT FROM mmall_order" />
-            <marker date="1517819302807" expanded="true" signature="7893:7983" ph="SELECT from mmall_order" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1805,7 +1656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1813,7 +1663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="136" column="27" lean-forward="true" selection-start-line="136" selection-start-column="27" selection-end-line="136" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1821,7 +1670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1835,8 +1683,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mmall/controller/portal/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="75" column="13" lean-forward="true" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+        <state relative-caret-position="276">
+          <caret line="92" column="12" lean-forward="true" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mmall/controller/portal/ShippingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="98" column="31" lean-forward="false" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mmall/controller/portal/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
           <folding />
         </state>
       </provider>
