@@ -16,6 +16,8 @@ public class Const {
 
     public static final String USERNAME = "username";
 
+    public static final String TOKEN_PREFIX = "token_";
+
     //用户类型
     public interface Role{
         int ROLE_CUSTOMER = 0; //普通用户

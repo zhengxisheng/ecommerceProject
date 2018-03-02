@@ -9,7 +9,10 @@ import com.mmall.pojo.User;
 import com.mmall.service.IFileService;
 import com.mmall.service.IProductService;
 import com.mmall.service.IUserService;
+import com.mmall.util.CookieUtil;
+import com.mmall.util.JsonUtil;
 import com.mmall.util.PropertiesUtil;
+import com.mmall.util.RedisPoolUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -41,14 +44,18 @@ public class ProductManagerController {
 
     /**
      *  保存或更新产品信息
-     * @param session
+     * @param request
      * @param product 产品对象
      * @return
      */
     @RequestMapping(value = "save.do",method = RequestMethod.POST)
     @ResponseBody
-    public ServerResponse saveProduct(HttpSession session, Product product){
-        User user = (User) session.getAttribute(Const.CURRENT_USER);
+    public ServerResponse saveProduct(HttpServletRequest request, Product product){
+        String loginToken = CookieUtil.readLoginToken(request);
+        if (StringUtils.isEmpty(loginToken)){
+            return ServerResponse.createByErrorMsg("用户未登陆，无法获取用户信息");
+        }
+        User user = JsonUtil.String2Obj(RedisPoolUtil.get(loginToken),User.class);
         if(user == null){
             return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(),"用户未登陆,请先登陆");
         }
@@ -61,15 +68,19 @@ public class ProductManagerController {
 
     /**
      * 更新产品销售状态信息
-     * @param session
+     * @param request
      * @param productId 产品Id
      * @param status 产品状态
      * @return
      */
     @RequestMapping(value = "setProductStatus.do",method = RequestMethod.POST)
     @ResponseBody
-    public ServerResponse setProductStatus(HttpSession session,Integer productId,Integer status){
-        User user = (User) session.getAttribute(Const.CURRENT_USER);
+    public ServerResponse setProductStatus(HttpServletRequest request,Integer productId,Integer status){
+        String loginToken = CookieUtil.readLoginToken(request);
+        if (StringUtils.isEmpty(loginToken)){
+            return ServerResponse.createByErrorMsg("用户未登陆，无法获取用户信息");
+        }
+        User user = JsonUtil.String2Obj(RedisPoolUtil.get(loginToken),User.class);
         if (user == null){
             return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(),"用户未登陆,请先登陆");
         }
@@ -82,14 +93,18 @@ public class ProductManagerController {
 
     /**
      *  查看商品详情
-     * @param session
+     * @param request
      * @param productId 产品Id
      * @return
      */
     @RequestMapping(value = "getDetailByProductId.do",method = RequestMethod.POST)
     @ResponseBody
-    public ServerResponse getDetailByProductId(HttpSession session,Integer productId){
-        User user = (User) session.getAttribute(Const.CURRENT_USER);
+    public ServerResponse getDetailByProductId(HttpServletRequest request,Integer productId){
+        String loginToken = CookieUtil.readLoginToken(request);
+        if (StringUtils.isEmpty(loginToken)){
+            return ServerResponse.createByErrorMsg("用户未登陆，无法获取用户信息");
+        }
+        User user = JsonUtil.String2Obj(RedisPoolUtil.get(loginToken),User.class);
         if (user == null){
             return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(),"用户未登陆,请先登陆");
         }
@@ -102,17 +117,21 @@ public class ProductManagerController {
 
     /**
      *  获取商品列表
-     * @param session
+     * @param request
      * @param pageNum 页码
      * @param pageSize 每页条数
      * @return
      */
     @RequestMapping(value = "getProductList.do",method = RequestMethod.POST)
     @ResponseBody
-    public ServerResponse getProductList(HttpSession session,
+    public ServerResponse getProductList(HttpServletRequest request,
                                          @RequestParam(value = "pageNum",defaultValue = "1") int pageNum,
                                          @RequestParam(value = "pageSize",defaultValue = "10") int pageSize){
-        User user = (User) session.getAttribute(Const.CURRENT_USER);
+        String loginToken = CookieUtil.readLoginToken(request);
+        if (StringUtils.isEmpty(loginToken)){
+            return ServerResponse.createByErrorMsg("用户未登陆，无法获取用户信息");
+        }
+        User user = JsonUtil.String2Obj(RedisPoolUtil.get(loginToken),User.class);
         if (user == null){
             return ServerResponse.createByErrorCodeMessage(ResponseCode.ILLEGAL_ARGUMENT.getCode(),ResponseCode.ILLEGAL_ARGUMENT.getDesc());
         }
@@ -125,7 +144,7 @@ public class ProductManagerController {
 
     /**
      *  根据商品名称和Id 获取商品列表
-     * @param session
+     * @param request
      * @param productName 商品名称
      * @param productId 商品id
      * @param pageNum 页码
@@ -134,10 +153,14 @@ public class ProductManagerController {
      */
     @RequestMapping(value = "searchProduct.do",method = RequestMethod.POST)
     @ResponseBody
-    public ServerResponse searchProduct (HttpSession session,String productName,Integer productId,
+    public ServerResponse searchProduct (HttpServletRequest request,String productName,Integer productId,
                                          @RequestParam(value = "pageNum",defaultValue = "1") int pageNum,
                                          @RequestParam(value = "pageSize",defaultValue = "10") int pageSize){
-        User user = (User) session.getAttribute(Const.CURRENT_USER);
+        String loginToken = CookieUtil.readLoginToken(request);
+        if (StringUtils.isEmpty(loginToken)){
+            return ServerResponse.createByErrorMsg("用户未登陆，无法获取用户信息");
+        }
+        User user = JsonUtil.String2Obj(RedisPoolUtil.get(loginToken),User.class);
         if (user == null){
             return ServerResponse.createByErrorCodeMessage(ResponseCode.ILLEGAL_ARGUMENT.getCode(),ResponseCode.ILLEGAL_ARGUMENT.getDesc());
         }
@@ -150,17 +173,19 @@ public class ProductManagerController {
 
     /**
      *  文件上传接口
-     * @param session
      * @param file
      * @param request
      * @return
      */
     @RequestMapping(value = "upload.do")
     @ResponseBody
-    public ServerResponse upload (HttpSession session,
-                                  @RequestParam(value = "upload_file",required = false) MultipartFile file,
+    public ServerResponse upload (@RequestParam(value = "upload_file",required = false) MultipartFile file,
                                   HttpServletRequest request){
-        User user = (User) session.getAttribute(Const.CURRENT_USER);
+        String loginToken = CookieUtil.readLoginToken(request);
+        if (StringUtils.isEmpty(loginToken)){
+            return ServerResponse.createByErrorMsg("用户未登陆，无法获取用户信息");
+        }
+        User user = JsonUtil.String2Obj(RedisPoolUtil.get(loginToken),User.class);
         if (user == null){
             return  ServerResponse.createByErrorCodeMessage(ResponseCode.ILLEGAL_ARGUMENT.getCode(),ResponseCode.ILLEGAL_ARGUMENT.getDesc());
         }
@@ -179,7 +204,6 @@ public class ProductManagerController {
 
     /**
      *  富文本simditor图片上传
-     * @param session
      * @param file
      * @param request
      * @param response
@@ -194,11 +218,15 @@ public class ProductManagerController {
      */
     @RequestMapping(value = "richtextImgUpload.do")
     @ResponseBody
-    public Map richtextImgUpload(HttpSession session,
-                                 @RequestParam(value = "upload_file",required = false) MultipartFile file,
+    public Map richtextImgUpload(@RequestParam(value = "upload_file",required = false) MultipartFile file,
                                  HttpServletRequest request, HttpServletResponse response){
-        User user = (User) session.getAttribute(Const.CURRENT_USER);
+        String loginToken = CookieUtil.readLoginToken(request);
         Map resultMap = Maps.newHashMap();
+        if (StringUtils.isEmpty(loginToken)){
+            resultMap.put("success",false);
+            resultMap.put("msg","请登陆管理员账号");
+        }
+        User user = JsonUtil.String2Obj(RedisPoolUtil.get(loginToken),User.class);
         if (user == null){
             resultMap.put("success",false);
             resultMap.put("msg","请登陆管理员账号");

@@ -141,15 +141,19 @@ public class UserController {
 
     /**
      * 登陆状态重置密码
-     * @param session  用户session
+     * @param request  request
      * @param passwordOld 旧密码
      * @param passwordNew 新密码
      * @return
      */
     @RequestMapping(value = "resetPassword.do",method = RequestMethod.POST)
     @ResponseBody
-    public ServerResponse<String> resetPassword(HttpSession session,String passwordOld,String passwordNew){
-        User user =(User)session.getAttribute(Const.CURRENT_USER);
+    public ServerResponse<String> resetPassword(HttpServletRequest request,String passwordOld,String passwordNew){
+        String loginToken = CookieUtil.readLoginToken(request);
+        if (StringUtils.isEmpty(loginToken)){
+            return ServerResponse.createByErrorMsg("用户未登陆，无法获取用户信息");
+        }
+        User user = JsonUtil.String2Obj(RedisPoolUtil.get(loginToken),User.class);
         if(user==null){
             return ServerResponse.createByErrorMsg("用户未登陆,请重新登陆");
         }
@@ -158,14 +162,18 @@ public class UserController {
 
     /**
      * 更新个人信息
-     * @param session 用户session
+     * @param request 用户request
      * @param user 用户信息
      * @return
      */
     @RequestMapping(value = "updateInfomation.do",method = RequestMethod.POST)
     @ResponseBody
-    public ServerResponse<User> updateInfomation(HttpSession session,User user){
-        User currentUser = (User) session.getAttribute(Const.CURRENT_USER);
+    public ServerResponse<User> updateInfomation(HttpServletRequest request,User user){
+        String loginToken = CookieUtil.readLoginToken(request);
+        if (StringUtils.isEmpty(loginToken)){
+            return ServerResponse.createByErrorMsg("用户未登陆，无法获取用户信息");
+        }
+        User currentUser = JsonUtil.String2Obj(RedisPoolUtil.get(loginToken),User.class);
         if(currentUser == null){
             return ServerResponse.createByErrorMsg("用户未登陆");
         }
@@ -174,7 +182,7 @@ public class UserController {
         ServerResponse<User> response = iUserService.updateInformation(user);
         if(response.isSuccess()){
             response.getData().setUsername(currentUser.getUsername());
-            session.setAttribute(Const.CURRENT_USER,response.getData());
+            RedisPoolUtil.setEx(loginToken,JsonUtil.obj2String(response.getData()), Const.RedisCacheExTime.REDIS_SESSION_EXTIME);
         }
         return response;
     }
