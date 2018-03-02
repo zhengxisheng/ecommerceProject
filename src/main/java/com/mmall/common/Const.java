@@ -59,6 +59,10 @@ public class Const {
         String RESPONSE_SUCCESS = "success";
         String RESPONSE_FAILED = "failed";
     }
+    //redis key超时时间
+    public interface RedisCacheExTime{
+        int REDIS_SESSION_EXTIME = 60 * 30;//30分钟
+    }
 
     //订单支付状态
     public enum OrderStatusEnum {
