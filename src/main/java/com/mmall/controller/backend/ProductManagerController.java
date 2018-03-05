@@ -1,7 +1,6 @@
 package com.mmall.controller.backend;
 
 import com.google.common.collect.Maps;
-import com.mmall.common.Const;
 import com.mmall.common.ResponseCode;
 import com.mmall.common.ServerResponse;
 import com.mmall.pojo.Product;
@@ -12,7 +11,7 @@ import com.mmall.service.IUserService;
 import com.mmall.util.CookieUtil;
 import com.mmall.util.JsonUtil;
 import com.mmall.util.PropertiesUtil;
-import com.mmall.util.RedisPoolUtil;
+import com.mmall.util.RedisShardedPoolUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,7 +23,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 /**
@@ -55,7 +53,7 @@ public class ProductManagerController {
         if (StringUtils.isEmpty(loginToken)){
             return ServerResponse.createByErrorMsg("用户未登陆，无法获取用户信息");
         }
-        User user = JsonUtil.String2Obj(RedisPoolUtil.get(loginToken),User.class);
+        User user = JsonUtil.String2Obj(RedisShardedPoolUtil.get(loginToken),User.class);
         if(user == null){
             return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(),"用户未登陆,请先登陆");
         }
@@ -80,7 +78,7 @@ public class ProductManagerController {
         if (StringUtils.isEmpty(loginToken)){
             return ServerResponse.createByErrorMsg("用户未登陆，无法获取用户信息");
         }
-        User user = JsonUtil.String2Obj(RedisPoolUtil.get(loginToken),User.class);
+        User user = JsonUtil.String2Obj(RedisShardedPoolUtil.get(loginToken),User.class);
         if (user == null){
             return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(),"用户未登陆,请先登陆");
         }
@@ -104,7 +102,7 @@ public class ProductManagerController {
         if (StringUtils.isEmpty(loginToken)){
             return ServerResponse.createByErrorMsg("用户未登陆，无法获取用户信息");
         }
-        User user = JsonUtil.String2Obj(RedisPoolUtil.get(loginToken),User.class);
+        User user = JsonUtil.String2Obj(RedisShardedPoolUtil.get(loginToken),User.class);
         if (user == null){
             return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(),"用户未登陆,请先登陆");
         }
@@ -131,7 +129,7 @@ public class ProductManagerController {
         if (StringUtils.isEmpty(loginToken)){
             return ServerResponse.createByErrorMsg("用户未登陆，无法获取用户信息");
         }
-        User user = JsonUtil.String2Obj(RedisPoolUtil.get(loginToken),User.class);
+        User user = JsonUtil.String2Obj(RedisShardedPoolUtil.get(loginToken),User.class);
         if (user == null){
             return ServerResponse.createByErrorCodeMessage(ResponseCode.ILLEGAL_ARGUMENT.getCode(),ResponseCode.ILLEGAL_ARGUMENT.getDesc());
         }
@@ -160,7 +158,7 @@ public class ProductManagerController {
         if (StringUtils.isEmpty(loginToken)){
             return ServerResponse.createByErrorMsg("用户未登陆，无法获取用户信息");
         }
-        User user = JsonUtil.String2Obj(RedisPoolUtil.get(loginToken),User.class);
+        User user = JsonUtil.String2Obj(RedisShardedPoolUtil.get(loginToken),User.class);
         if (user == null){
             return ServerResponse.createByErrorCodeMessage(ResponseCode.ILLEGAL_ARGUMENT.getCode(),ResponseCode.ILLEGAL_ARGUMENT.getDesc());
         }
@@ -185,7 +183,7 @@ public class ProductManagerController {
         if (StringUtils.isEmpty(loginToken)){
             return ServerResponse.createByErrorMsg("用户未登陆，无法获取用户信息");
         }
-        User user = JsonUtil.String2Obj(RedisPoolUtil.get(loginToken),User.class);
+        User user = JsonUtil.String2Obj(RedisShardedPoolUtil.get(loginToken),User.class);
         if (user == null){
             return  ServerResponse.createByErrorCodeMessage(ResponseCode.ILLEGAL_ARGUMENT.getCode(),ResponseCode.ILLEGAL_ARGUMENT.getDesc());
         }
@@ -226,7 +224,7 @@ public class ProductManagerController {
             resultMap.put("success",false);
             resultMap.put("msg","请登陆管理员账号");
         }
-        User user = JsonUtil.String2Obj(RedisPoolUtil.get(loginToken),User.class);
+        User user = JsonUtil.String2Obj(RedisShardedPoolUtil.get(loginToken),User.class);
         if (user == null){
             resultMap.put("success",false);
             resultMap.put("msg","请登陆管理员账号");
