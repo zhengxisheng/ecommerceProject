@@ -31,8 +31,6 @@
             </bean>
         </mvc:message-converters>
     </mvc:annotation-driven>
-    
-
 
     <!-- 文件上传 -->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
@@ -40,6 +38,13 @@
         <property name="maxInMemorySize" value="4096" />
         <property name="defaultEncoding" value="UTF-8"></property>
     </bean>
-
+    <!-- 拦截器定义 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!-- /manage/** **会拦截到子包 -->
+            <mvc:mapping path="/manage/**"/>
+            <bean class="com.mmall.controller.common.interceptor.AuthorityInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
 </beans>
