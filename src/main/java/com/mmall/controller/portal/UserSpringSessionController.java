@@ -16,7 +16,10 @@ import javax.servlet.http.HttpSession;
 
 /**
  * Created by fanlinglong on 2018/3/7.
- */
+ *
+ * 测试springsesionl零侵入实现session共享
+ *
+ * */
 @Controller
 @RequestMapping(value = "/user/springsession/")
 public class UserSpringSessionController {
