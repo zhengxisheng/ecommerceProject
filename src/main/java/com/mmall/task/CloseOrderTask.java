@@ -30,7 +30,8 @@ public class CloseOrderTask {
         //value设置当前时间+锁超时时间
         //根据这个值可以判断锁是否超时
         Long setnxResult = RedisShardedPoolUtil.setnx(Const.REDIS_LOCK.CLOSE_ORDER_TASK_LOCK,String.valueOf(System.currentTimeMillis() + lockTimeout));
-        if (setnxResult != null && setnxResult == 1){
+        //intVaule()方法可以将long转化为int
+        if (setnxResult != null && setnxResult.intValue() == 1){
             log.info("===关闭订单定时任务启动===");
             closeOrder(Const.REDIS_LOCK.CLOSE_ORDER_TASK_LOCK);
         }else {
