@@ -65,7 +65,10 @@ public class Const {
     public interface RedisCacheExTime{
         int REDIS_SESSION_EXTIME = 60 * 30;//30分钟
     }
-
+    //redis关闭订单分布式锁
+    public interface REDIS_LOCK{
+        String CLOSE_ORDER_TASK_LOCK = "CLOSE_ORDER_TASK_LOCK";
+    }
     //订单支付状态
     public enum OrderStatusEnum {
         CANCELED(0,"已取消"),

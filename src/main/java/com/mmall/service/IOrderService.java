@@ -32,4 +32,6 @@ public interface IOrderService {
     ServerResponse queryOrderPayStatus(Integer userId, Long orderNo);
 
     ServerResponse getOrderCartProduct(Integer userId);
+
+    void closeOrder (int hour);
 }
