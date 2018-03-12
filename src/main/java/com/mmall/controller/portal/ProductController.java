@@ -6,10 +6,7 @@ import com.mmall.service.IProductService;
 import com.mmall.vo.ProductDetailVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by fanlinglong on 2018/1/17.
@@ -33,6 +30,17 @@ public class ProductController {
     }
 
     /**
+     *  获取产品明细 restful风格
+     * @param productId
+     * @return
+     */
+    @RequestMapping(value = "{productId}",method = RequestMethod.GET)
+    @ResponseBody
+    public ServerResponse<ProductDetailVo> getDetailByProductIdRestful(@PathVariable Integer productId){
+        return iProductService.getProductDetial(productId);
+    }
+
+    /**
      *  查询列表
      * @param keyword  搜索条件
      * @param categroyId  搜索商品分类ID
@@ -50,4 +58,5 @@ public class ProductController {
                                          @RequestParam(value ="orderBy",required = false) String orderBy){
         return iProductService.getProductByKeywordCategory(keyword,categroyId,pageNum,pageSize,orderBy);
     }
+
 }
