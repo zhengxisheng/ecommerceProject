@@ -1,14 +1,18 @@
 package com.mmall.task;
 
 import com.mmall.common.Const;
+import com.mmall.common.RedissonManager;
 import com.mmall.service.IOrderService;
 import com.mmall.util.PropertiesUtil;
 import com.mmall.util.RedisShardedPoolUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.redisson.api.RLock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by fanlinglong on 2018/3/12.
@@ -21,10 +25,13 @@ public class CloseOrderTask {
     @Autowired
     private IOrderService iOrderService;
 
+    @Autowired
+    private RedissonManager redissonManager;
+
     /**
      *  定时关闭订单
      */
-    @Scheduled(cron="0 */1 * * * ?")
+    //@Scheduled(cron="0 */1 * * * ?")
     public void closeOrderTask(){
         long lockTimeout =Long.parseLong(PropertiesUtil.getProperty("lock.timeout"));
         //value设置当前时间+锁超时时间
@@ -54,6 +61,33 @@ public class CloseOrderTask {
             }
         }
         log.info("===关闭订单定时任务结束===");
+    }
+
+    /**
+     *  redission分布式锁定时关单
+     */
+    @Scheduled(cron="0 */1 * * * ?")
+    public void closeOrderTaskByRedisson(){
+        RLock lock = redissonManager.getRedisson().getLock(Const.REDIS_LOCK.CLOSE_ORDER_TASK_LOCK);
+        boolean getLock = false;
+        try {
+            if (getLock = lock.tryLock(0, 50, TimeUnit.SECONDS)){
+                log.info("Redisson获取分布式锁:{},ThreadName:{}",Const.REDIS_LOCK.CLOSE_ORDER_TASK_LOCK,Thread.currentThread().getName());
+                int hour = Integer.parseInt(PropertiesUtil.getProperty("close.order.task.time.hour","2"));
+                //iOrderService.closeOrder(hour);
+            }else {
+                log.info("Redisson没有获取分布式锁:{},ThreadName:{}",Const.REDIS_LOCK.CLOSE_ORDER_TASK_LOCK,Thread.currentThread().getName());
+            }
+        } catch (InterruptedException e) {
+            log.error("Redission获取分布式锁异常",e);
+        }finally {
+            if (!getLock){
+                return;
+            }
+            lock.unlock();
+            log.info("Redission分布式锁释放锁");
+        }
+
     }
     public void closeOrder(String lockName){
         RedisShardedPoolUtil.expire(lockName,5);//防止死锁,防止当程序异常导致del操作未执行,一直走判断锁是否超时分支
