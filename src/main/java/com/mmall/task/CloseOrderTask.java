@@ -31,7 +31,7 @@ public class CloseOrderTask {
     /**
      *  定时关闭订单
      */
-    //@Scheduled(cron="0 */1 * * * ?")
+    @Scheduled(cron="0 */1 * * * ?")
     public void closeOrderTask(){
         long lockTimeout =Long.parseLong(PropertiesUtil.getProperty("lock.timeout"));
         //value设置当前时间+锁超时时间
@@ -66,7 +66,7 @@ public class CloseOrderTask {
     /**
      *  redission分布式锁定时关单
      */
-    @Scheduled(cron="0 */1 * * * ?")
+    //@Scheduled(cron="0 */1 * * * ?")
     public void closeOrderTaskByRedisson(){
         RLock lock = redissonManager.getRedisson().getLock(Const.REDIS_LOCK.CLOSE_ORDER_TASK_LOCK);
         boolean getLock = false;
